@@ -1,0 +1,2 @@
+2025-03-21T18:34:06.955292700 ERROR: Twilio API Exception for recipient Phone1: Authentication Error - invalid username
+2025-03-21T18:34:07.089888100 ERROR: Twilio API Exception for recipient Phone2: Authentication Error - invalid username
