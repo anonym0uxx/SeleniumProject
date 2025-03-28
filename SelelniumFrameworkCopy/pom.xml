@@ -78,7 +78,7 @@
             <configuration>
                 <!-- Optional configurations -->
                 <suiteXmlFiles>
-                    <suiteXmlFile>src/test/java/s2.SmokeTests/testng.xml</suiteXmlFile>
+                    <suiteXmlFile>src/test/java/com/s2.SmokeTests/suite-01.xml</suiteXmlFile>
                 </suiteXmlFiles>
             </configuration>
         </plugin>

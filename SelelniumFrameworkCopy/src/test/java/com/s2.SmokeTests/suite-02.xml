@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Golden1 Test Suite" parallel="methods" thread-count="16">
+    
+    <!-- Add the listener here -->
+    <listeners>
+        <listener class-name="utilities.SuiteListener"/>
+    </listeners>
+
+    <test name="Golden1 Firefox Test">
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="goldenOneDotCom.ContactUs"/>
+            <class name="goldenOneDotCom.GoldenOneHomePage"/>
+            <class name="goldenOneDotCom.TabFunctionality"/>
+            <class name="goldenOneDotCom.SearchIndexFeature"/>
+        </classes>
+    </test>
+	
+    <!-- Continue with other browser tests here -->
+
+</suite>
