@@ -84,3 +84,15 @@
 2025-03-28T15:18:07.263176700 ERROR: Twilio API Exception for recipient Phone2: Authentication Error - invalid username
 2025-03-28T15:19:50.256090300 ERROR: Twilio API Exception for recipient Phone1: Authentication Error - invalid username
 2025-03-28T15:19:50.356055 ERROR: Twilio API Exception for recipient Phone2: Authentication Error - invalid username
+2025-03-31T12:52:16.020452200 ERROR: Twilio API Exception for recipient Phone1: Authentication Error - invalid username
+2025-03-31T12:52:16.112014200 ERROR: Twilio API Exception for recipient Phone2: Authentication Error - invalid username
+2025-04-03T14:46:07.579671700 ERROR: Twilio API Exception for recipient Phone1: Authentication Error - invalid username
+2025-04-03T14:46:07.663780700 ERROR: Twilio API Exception for recipient Phone2: Authentication Error - invalid username
+2025-04-03T14:48:37.961710400 ERROR: Twilio API Exception for recipient Phone1: Authentication Error - invalid username
+2025-04-03T14:48:38.097666700 ERROR: Twilio API Exception for recipient Phone2: Authentication Error - invalid username
+2025-04-03T14:57:25.428106500 ERROR: Twilio API Exception for recipient Phone1: Authentication Error - invalid username
+2025-04-03T14:57:25.599327700 ERROR: Twilio API Exception for recipient Phone2: Authentication Error - invalid username
+2025-04-03T15:00:40.592447800 ERROR: Twilio API Exception for recipient Phone1: Authentication Error - invalid username
+2025-04-03T15:00:40.688558700 ERROR: Twilio API Exception for recipient Phone2: Authentication Error - invalid username
+2025-04-03T16:08:31.471375400 ERROR: Twilio API Exception for recipient Phone1: Authentication Error - invalid username
+2025-04-03T16:08:31.556390300 ERROR: Twilio API Exception for recipient Phone2: Authentication Error - invalid username

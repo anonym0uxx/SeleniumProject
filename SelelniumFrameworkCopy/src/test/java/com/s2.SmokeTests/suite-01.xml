@@ -14,8 +14,7 @@
             <class name="com.goldenOneDotCom.tests.TabFunctionalityTest"/>
             <class name="com.goldenOneDotCom.tests.SearchIndexFeatureTest"/>
         </classes>
-    </test>
-	
+    </test>    
     <!-- Continue with other browser tests here -->
 
 </suite>
