@@ -9,7 +9,8 @@
     <test name="Click Investing Tab Test">
         <parameter name="browser" value="chrome" />
         <classes>
-            <class name="com.goldenOneDotCom.tests.SmokeTests.ClickInvestingTabTest"/>
+            <class name="com.goldenOneDotCom.tests.SmokeTests.ValidateInvestingTabContentTest"/>
+            <class name="com.goldenOneDotCom.tests.SmokeTests.MakeInvestmentPlanBehaviorTest"/>
         </classes>
     </test>
 	

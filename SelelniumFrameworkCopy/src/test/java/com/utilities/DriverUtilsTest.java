@@ -55,12 +55,15 @@ public class DriverUtilsTest {
             try {
                 // Define the directory and file path
                 String screenshotDir = TestConstantsTest.SCREENSHOT_DIR;
-                //Since we already executed the Test we have the suite name assigned to our Test Constant
-                screenshotDir = screenshotDir + File.separator+TestConstantsTest.SUITE_NAME +File.separator+TestConstantsTest.TIMESTAMP +File.separator+ "Screenshots";
+                // Since we already executed the Test we have the suite name assigned to our
+                // Test Constant
+                screenshotDir = screenshotDir + File.separator + TestConstantsTest.SUITE_NAME + File.separator
+                        + TestConstantsTest.TIMESTAMP + File.separator + "Screenshots";
                 File dir = new File(screenshotDir);
-                if (!dir.exists()) dir.mkdirs();  // Create the directory if it doesn't exist
-                System.out.println("Screenshots DIR: "+screenshotDir);
-                String filePath = screenshotDir +File.separator+ screenshotName + ".png";
+                if (!dir.exists())
+                    dir.mkdirs(); // Create the directory if it doesn't exist
+                System.out.println("Screenshots DIR: " + screenshotDir);
+                String filePath = screenshotDir + File.separator + screenshotName + ".png";
                 FileUtils.copyFile(screenshotFile, new File(filePath));
                 System.out.println("Screenshot saved: " + filePath);
             } catch (IOException e) {
