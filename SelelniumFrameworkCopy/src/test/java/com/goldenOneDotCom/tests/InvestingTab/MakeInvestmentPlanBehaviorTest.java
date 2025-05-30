@@ -1,10 +1,9 @@
-package com.goldenOneDotCom.tests.SmokeTests;
+package com.goldenOneDotCom.tests.InvestingTab;
 
 import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ExecutionException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -22,7 +21,6 @@ import org.testng.annotations.Optional;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.fasterxml.jackson.databind.JsonSerializable.Base;
 import com.utilities.BaseUtilities;
 import com.utilities.DriverUtilsTest;
 import com.utilities.ExtentReportManagerTest;

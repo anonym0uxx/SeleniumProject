@@ -15,6 +15,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -35,7 +36,10 @@ public class BaseUtilities {
         // We use the driver to find the element by the generated xpath
         return driver.findElement(By.xpath(xpath));
     }
-
+    //Method to find elements return a List of WebElements
+    public static List<WebElement> findElements(WebDriver driver, By locator){
+        return driver.findElements(locator);
+    }
     // Method to navigate back on a webpage
     public static void navigateBack(WebDriver driver) {
         driver.navigate().back();
@@ -50,6 +54,17 @@ public class BaseUtilities {
             e.printStackTrace();
             System.out.println("Expected URL does not match current URL");
         }
+    }
+    public static boolean elementHasClass(WebDriver driver, By selector, String className){
+        WebElement element = waitForElementToBeVisible(driver, selector, 
+        TestConstantsTest.DEFAULT_WAIT_TIME_SECONDS);
+        String classes = element.getAttribute("class");
+        return classes != null && classes.contains(className);
+    }
+
+    //Check if an element is displayed
+    public static boolean isElementDisplayed(WebElement element){
+        return element.isDisplayed();
     }
 
     // Method that returns the current url
@@ -68,9 +83,11 @@ public class BaseUtilities {
     }
 
     // Method to scroll to an element (to avoid element click interception)
-    public static void ScrollToElement(WebDriver driver, WebElement element) {
+    public static void ScrollToElement(WebDriver driver, WebElement element) throws InterruptedException {
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
         jsExecutor.executeScript("arguments[0].scrollIntoView(true)", element);
+        jsExecutor.executeScript("window.scrollBy(0,-100);");
+        Thread.sleep(500);
     }
 
     // Method to find an element using the tag and expected text
@@ -137,6 +154,20 @@ public class BaseUtilities {
                 .collect(Collectors.toList());
     }
 
+    //Method to wait for a single element to be visible
+    public static WebElement waitForElementToBeVisible(WebDriver driver,By locator,int timeout){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+    //Method to wait for an element to ve displayed
+    public static void waitUntilVisible(WebDriver driver, By locator, int timeout){
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(timeout));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+    //Method to check if an element is present
+    public static boolean isElementNotPresent(WebDriver driver, By locactor){
+        return driver.findElements(locactor).isEmpty();
+    }
     // Method to wait for an element to be visible
     public static List<WebElement> waitForVisibleElements(WebDriver driver, String xpath) {
         try {
@@ -295,6 +326,62 @@ public class BaseUtilities {
         }
         return null; // Return null if no matching text is found
     }
+    //Method to load the json content that contains the expected faq
+    public static Map<String, List<String>> loadExpectedFaqMap(String jsonFilePath, String rootNode) throws Exception{
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode root = mapper.readTree(new File(jsonFilePath));
+        JsonNode faqsNode = root.get(rootNode);
+
+        Map<String, List<String>> faqMap = new HashMap<>();
+
+        if(faqsNode != null && faqsNode.isArray()){
+            for(JsonNode node : faqsNode){
+                String question  = node.get("question").asText();
+                List<String> answerList  = new ArrayList<>();
+                for(JsonNode asnwerLine: node.get("answer")){
+                    String line = asnwerLine.asText().trim();
+                    System.out.println("ANSWER LINE FROM JSON: "+line);
+                    if(!line.isEmpty()){
+                        answerList.add(line);
+                    }
+                }
+                faqMap.put(question, answerList);
+            }
+        }
+        return faqMap;
+    }
+
+    public static boolean compareFaqMaps(Map<String,List<String>> actual, Map<String,List<String>> expected){
+        boolean matches = true;
+
+        for(String expectedQuestion : expected.keySet()){
+            if(!actual.containsKey(expectedQuestion)){
+                System.out.printf("X Missing Question: \"%s\"%n",expectedQuestion);
+                matches = false;
+                continue;
+            }
+            List<String> expectedAnswer = expected.get(expectedQuestion);
+            List<String> actualAnswer = actual.get(expectedQuestion);
+
+            if(!expectedAnswer.equals(actualAnswer)){
+                System.out.printf("X Mismatch in answer for: \"%s\"%n",expectedQuestion);
+                System.out.println("Expected: ");
+                expectedAnswer.forEach(line-> System.out.println(" . "+line));
+                System.out.println("Actual: ");
+                actualAnswer.forEach(line-> System.out.println(" ."+line));
+                matches = false;
+            }
+        }
+        
+        //check for extra questions in actual that does not exist in expected
+        for(String actualQuestion : actual.keySet()){
+            if(!expected.containsKey(actualQuestion)){
+                System.out.printf(" Extra question in Actual FAQ: \"%s\"%n",actualQuestion);
+                matches = false;
+            }
+        }
+        return matches;
+    }
 
     // Method to validate elements by reading from a JSON file in the resources
     // folder
@@ -313,16 +400,23 @@ public class BaseUtilities {
         for (JsonNode element : investmentServicesSectionContent) {
             String tag = element.path("tag").asText();
             String expectedText = element.path("expectedText").asText();
-
-            // Create XPath expression to find element by tag and text
-            String xpathExpression = String.format("//%s[contains(text(),'%s')]", tag, expectedText);
-
+            String xpathExpression = "";
+            if(element.has("property")){
+                String property = element.path("property").asText();
+                xpathExpression = String.format("//%s[@%s='%s']",tag,property,expectedText);
+            }
+            else{
+                // Create XPath expression to find element by tag and text
+                xpathExpression = String.format("//%s[contains(text(),'%s')]", tag, expectedText);
+            }
             try {
                 // Find the element using the Xpath expression if the driver is able to find the
                 // element using the tag and text then
                 // means that the element contains the text that we have in our json file
                 WebElement webElement = driver.findElement(By.xpath(xpathExpression));
-
+                if(expectedText.contains("?")){
+                    expectedText = expectedText.replace("?","");
+                }
                 // validate if the element is found and if its displayed
                 if (webElement != null && webElement.isDisplayed()) {
                     System.out.println("Text validation is passed for tag: " + tag);

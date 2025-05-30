@@ -1,0 +1,189 @@
+{
+    "SelfGuidedInvestmentHeaders":[
+        {
+            "tag":"div",
+            "expectedText":"Online Investing, Personalized for You"
+        },
+        {
+            "tag":"h2",
+            "expectedText":"About Investing with Guided Wealth Portfolios"
+        },
+        {
+            "tag":"a",
+            "property":"aria-label",
+            "expectedText":"About Investing with Guided Wealth Portfolios video"
+        },
+        {
+            "tag":"a",
+            "property":"aria-label",
+            "expectedText":"Get Started with Basic"
+        },
+        {
+            "tag":"a",
+            "property":"aria-label",
+            "expectedText":"Get Started with PLUS"
+        },
+        {
+            "tag":"h2",
+            "expectedText":"GWP FAQs"
+        },
+        {
+            "tag":"a",
+            "expectedText":"Additional FAQs"
+        },
+        {
+            "tag":"div",
+            "expectedText":"FINRA BrokerCheck"
+        },
+        {
+            "tag":"a",
+            "expectedText":"BrokerCheck"
+        },
+        {
+            "tag":"a",
+            "expectedText":"Download for iOS"
+        },
+        {
+            "tag":"a",
+            "expectedText":"Download for Android"
+        },
+         {
+            "tag":"h3",
+            "expectedText":"Who is eligible to sign up for GWP at Golden 1 Investment Services?"
+        },
+        {
+            "tag":"h3",
+            "expectedText":"What is Guided Wealth Portfolios (GWP) and how does it work?"
+        },
+        {
+            "tag":"h3",
+            "expectedText":"What type of investment management does GWP offer?"
+        },
+        {
+            "tag":"h3",
+            "expectedText":"What Investment goals can GWP support?"
+        },
+        {
+            "tag":"h3",
+            "expectedText":"What types of accounts does GWP support?"
+        }
+    ],
+    "FAQS":[
+        {
+            "question":"Who is eligible to sign up for GWP at Golden 1 Investment Services?",
+            "answer":[
+                "To sign up for Guided Wealth Portfolios investment management at Golden 1 Investment Services, you must:",
+                "1. Be a current Golden 1 member",
+                "2. Be at least 18 years old",
+                "3. Have a valid Social Security number or Tax Identification Number",
+                "4. Have at least $5,000 in investable assets",
+                "5. Have at least five years to retirement and be no more than 68 years old (if selecting retirement as goal)"
+            ]
+            
+        },
+        {
+            "question":"What is Guided Wealth Portfolios (GWP) and how does it work?",
+            "answer":[
+                "Guided Wealth Portfolios (GWP) is an advisor-enhanced digital investment platform. It combines a digital client experience and automated money management with oversight, review, and advice. GWP investment management is powered by FutureAdvisor, based on model portfolios created by LPL, and provides you the opportunity to begin a relationship with a Golden 1 Financial Services Representative. ",
+                "The GWP investment management philosophy is based on the belief that diversified investing is the best approach for providing consistent results over time. It combines this investment philosophy with daily, algorithmic monitoring that auto-rebalances your accounts, identifies tax-saving opportunities, and manages your household accounts. ",
+                "After answering a few questions and linking accounts, investors receive an analysis of their current investments and a recommended proposal. Enrollment happens online, leveraging DocuSign, to make enrollment easy. A member of the Golden 1 Investment Services team will provide onboarding and enrollment support and once the account becomes managed, GWP handles all ongoing maintenance, including portfolio rebalancing, and dividend reinvestment.",
+                "LPL is a leading independent broker/dealer, offering an integrated platform of proprietary technology, brokerage, and investment advisory services to more than 16,000 financial advisors and approximately 700 financial institutions. Both LPL and FutureAdvisor are investment advisors registered with the U.S. Securities and Exchange Commission. FutureAdvisor, wholly owned by BlackRock, Inc., is comprised of a team of financial professionals, data scientists, and software engineers."
+            ]
+        },
+        {
+            "question":"What type of investment management does GWP offer?",
+            "answer":[
+                "GWP offers globally diversified portfolios utilizing low-cost EFT's with a holistic and diversified approach across multiple accounts. Investors receive tax-efficient asset placement, LPL Research investment models, automated rebalancing, and tax-loss harvesting. ",
+                "Rebalancing and tax-loss harvesting algorithms run daily to actively monitor investor accounts. All assets are custodied at LPL."
+            ]
+        },
+          {
+            "question":"What Investment goals can GWP support?",
+            "answer":[
+                "GWP can accommodate up to three investment goal options including retirement, major purchase, and general investing. Each goal option is managed to a distinct set of asset allocations according to the investor’s risk tolerance and time horizon for each specific goal."
+            ]
+        },
+        {
+            "question":"What types of accounts does GWP support?",
+            "answer":[
+                "1. Traditional and Roth IRAs ",
+                "2. Individual taxable (TOD) ",
+                "3. Joint taxable (WROS,TIC)"
+            ]
+        }
+    ],
+    "AdditionalFAQS":[
+            {
+                "question": "What are the benefits of securely linking accounts vs. manually reporting accounts?",
+                "answer":[
+                    "The benefits of securely linking accounts include: 1. Pre-populated account information during enrollment 2. Investors immediately receive and sign enrollment documents in browser 3. Uploading account statements isn’t required 4. Accounts and holdings are automatically updated The benefits of manually reporting accounts include: 1. Backup for unsupported financial institutions 2. Approximate analysis for clients who do not have online access for their investment accounts"
+                ]
+            },
+            {
+                "question": "How long is my GWP proposal good for?",
+                "answer": [
+                    "Your GWP proposal lasts 45 days. After 45 days, the password expires. If you would like an extension, simply reach out to our service team and request an extension (additional 45 days). If enrollment is not complete by day 90, your login information will automatically be deleted, and you will need to create a new login to access their GWP proposal again."
+                ]
+            },
+            {
+                "question": "How is my recommended asset allocation decided?",
+                "answer": [
+                    "There are two main factors that are used to determine the right asset allocation for an investor: 1. Time horizon (the biggest factor for retirement and major purchase goals) 2. Your responses to the risk tolerance questions Time horizon is the more significant factor for the retirement and major purchase goals, as GWP uses a glidepath approach that provides a more aggressive portfolio the farther away an investor is from their goal. The longer an investor has until retirement, for example, the larger their equity allocation. As investors approach their goal, GWP will automatically recalibrate their portfolio toward more fixed income and cash. However, investors’ answers on the risk tolerance questionnaire also impact their allocation for the major purchase and retirement goals and are used to place them into one of the three risk tilts (fixed income tilt, balanced tilt, or equity tilt). The general investing goal only uses the investor’s responses to the risk tolerance questions."
+                ]
+            },
+            {
+                "question": "Which funds does GWP use?",
+                "answer":[ 
+                    "Depending on an investors’ investment strategy and initial investment amount, there may be as few as three or as many as ten ETFs in a portfolio. GWP has ten primary Exchange Traded Funds (ETF) that are used first. In addition, GWP has alternate “whitelist” funds that are approved for GWP portfolios and used in place of the primary funds for tax-loss harvesting events and portfolio rebalancing."
+                ]
+            },
+            {
+                "question": "What are ETFs?",
+                "answer":[ 
+                    "The exchange traded funds (ETFs) recommended in Guided Wealth Portfolios are passive investment securities that replicate the performance of an index representing a certain asset class. ETFs trade on an exchange and are bought and sold like stocks. ETFs usually have a lower expense ratio than actively managed mutual funds. The ETFs that Guided Wealth Portfolios invests in are large, liquid investments that track the benchmark that LPL Research has identified as being appropriate for the portfolio."
+                ]
+            },
+            {
+                "question": "Does GWP offer collective management of household accounts?",
+                "answer":[ 
+                    "Yes, GWP does offer householding. It’s available to all investors with at least two accounts. Householded accounts are managed together with the same time horizon and investment goal. To benefit from householding, investors need to input their combined information, such as income, saving rate, and investment goals, when enrolling. Be aware, performance and returns of different accounts managed in the household can vary."
+                ]
+            },
+            {
+                "question": "What if my goal(s) change?",
+                "answer":[ 
+                    "From the GWP Client Dashboard, investors who have an existing GWP retirement goal can select ‘Start new goal’ to begin the process of enrolling in a ‘General Investing’ or ‘Major Purchase’ goal. When funding this new goal, the investor should then select ‘Transfer investment account’ and report their existing GWP retirement goal account information. The GWP Operations team will send paperwork for the new account and to transfer assets."
+                ]
+            },
+            {
+                "question": "What is the enrollment timeline?",
+                "answer":[ 
+                    "Enrollment can be as short as five business days, depending on how investors have chosen to fund their account."
+                ]
+            },
+            {
+                "question": "Why didn’t I receive my DocuSign paperwork immediately when I chose to get started?",
+                "answer":[ 
+                    "The GWP service team has to review some cases before sending out paperwork. In these cases, the DocuSign paperwork will be emailed to the investor within one business day instead of showing up within the web browser. Common reasons for this include: 1. There were manually added investment accounts 2. A partial transfer is being used for account funding"
+                ]
+            },
+            {
+                "question": "What type of automated emails can I expect from GWP?",
+                "answer":[ 
+                    "Prospects receive: 1. Weekly summaries and updates: Along with weekly market commentaries, investors also receive emails as they hit new milestones in their portfolio growth. 2. Managed service invitation and GWP plan expiring: Investors will be reminded about the opportunity to apply for managed service and that they will lose access to their GWP proposal at the end of 45 days. 3. Best practices series: If investors have linked accounts, they’ll receive personalized emails on how they could improve their investments in various ways, including reducing fees, improved diversification, and more. Managed clients receive: 1. Annual suitability review: Investors receive a yearly annual review email, which can take the place of in-person meetings. The first email is sent 90 days before their account anniversary and asks investors to review and update their GWP plan and portfolio by going into the client portal. 2. Portfolio summaries and updates: Along with weekly market commentaries, investors also get a monthly portfolio update. They'll also receive emails as they hit new milestones in their portfolio growth. 3. Outside activity: When GWP notices new activity from the outside, such as receiving dividends or a new deposit, we'll notify the investor. 4. Activity for the investor: When we do work on their behalf, from tax-loss harvesting to investing new cash, we'll send an email to investors letting them know."
+                ]
+            },
+            {
+                "question": "How can I make a withdrawal?",
+                "answer":[ 
+                    "You can call the GWP or Golden 1 Investment Services team. If the bank account information is on file, we will put the withdrawal request in immediately. If the bank account information is not on file, the service team will send paperwork to link the accounts. Typical timelines are: For accounts with ACH information on file: Four to five business days to receive the settled cash. For accounts that don’t have bank account information on file: Five to seven business days to receive the funds."
+                ]
+            },
+            {
+                "question": "Why can investors only enroll in one goal at a time?",
+                "answer":[ 
+                    "GWP enrolls investing goals one at a time to focus and streamline your experience. Presently, investors must select, establish, and fund one goal at a time before establishing their next goal. We call this sequential goal enrollment, and we do this to ensure that the investors, advisors, and the GWP team take appropriate care in properly establishing each goal for a client."
+                ]
+            }
+        ]
+}

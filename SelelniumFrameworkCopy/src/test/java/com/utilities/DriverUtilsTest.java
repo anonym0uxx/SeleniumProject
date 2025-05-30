@@ -55,10 +55,20 @@ public class DriverUtilsTest {
             try {
                 // Define the directory and file path
                 String screenshotDir = TestConstantsTest.SCREENSHOT_DIR;
-                // Since we already executed the Test we have the suite name assigned to our
-                // Test Constant
+                String testName ="";
+                //We need to check if our test name contains any blank space
+                if(TestConstantsTest.TEST_NAME.contains(" ")){
+                    String[] parts = TestConstantsTest.TEST_NAME.split(" ");
+                    testName = String.join("",parts);
                 screenshotDir = screenshotDir + File.separator + TestConstantsTest.SUITE_NAME + File.separator
-                        + TestConstantsTest.TIMESTAMP + File.separator + "Screenshots";
+                        + TestConstantsTest.TIMESTAMP + File.separator + "Screenshots" + File.separator + testName;
+                }else{
+                    // Since we already executed the Test we have the suite name assigned to our
+                    // Test Constant
+                    //If the test name does not have any blank space we assign it directly
+                    screenshotDir = screenshotDir + File.separator + TestConstantsTest.SUITE_NAME + File.separator
+                        + TestConstantsTest.TIMESTAMP + File.separator + "Screenshots" + File.separator + TestConstantsTest.TEST_NAME;
+                }
                 File dir = new File(screenshotDir);
                 if (!dir.exists())
                     dir.mkdirs(); // Create the directory if it doesn't exist

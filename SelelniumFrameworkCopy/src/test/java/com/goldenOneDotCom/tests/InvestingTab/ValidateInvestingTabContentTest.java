@@ -1,4 +1,4 @@
-package com.goldenOneDotCom.tests.SmokeTests;
+package com.goldenOneDotCom.tests.InvestingTab;
 
 import java.time.Duration;
 
