@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="investing-tests" parallel="methods" thread-count="16">
+    
+    <!-- Add the listener here -->
+    <listeners>
+        <listener class-name="com.utilities.SuiteListenerTest"/>
+    </listeners>
+    <!-- Test organization since each class represents a test -->
+    <test name="Self Guided Investing Test">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.goldenOneDotCom.tests.InvestingTab.SelfGuidedInvesting"/>
+        </classes>
+    </test>
+
+    <test name="Validate Investing Tab Content Test">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.goldenOneDotCom.tests.InvestingTab.ValidateInvestingTabContentTest"/>
+        </classes>
+    </test>
+
+    <test name="Make Investment Plan Behavior Test">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.goldenOneDotCom.tests.InvestingTab.MakeInvestmentPlanBehaviorTest"/>
+        </classes>
+    </test>
+
+    <!-- Continue with other browser tests here -->
+
+</suite>

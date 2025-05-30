@@ -14,6 +14,11 @@ public class TestConstantsTest {
         public static final String SIPC_WEBSITE_URL = "https://www.sipc.org/";
         public static final String DOWNLOAD_FOR_IOS_URL = "https://apps.apple.com/us/app/lpl-account-view/id1397972267";
         public static final String DOWNLOAD_FOR_ANDROID_URL = "https://play.google.com/store/apps/details?id=com.lpl.avlpl&hl=en_US&gl=US";
+        public static final String SELF_GUIDED_INVESTING_URL_REDIRECTION = "https://www.golden1.com/planning-and-investing/investment-services/guided-wealth-portfolios";
+        public static final String LPL_FINANCIAL_WEBSITE_BASIC = "https://www.myaccountviewonline.com/prospectview/home/g1digital";
+        public static final String LPL_FINANCIAL_WEBSITE_PLUS =  "https://www.myaccountviewonline.com/prospectview/home/g1digitalplus";
+        public static final String ADDITIONAL_FAQS_SELF_GUIDED_INVESTING_PAGE = "https://www.golden1.com/planning-and-investing/investment-services/guided-wealth-portfolios/gwp-faqs";
+
         // Timeout durations
         public static final int DEFAULT_WAIT_TIME_SECONDS = 10; // WebDriverWait default timeout
 
@@ -32,7 +37,10 @@ public class TestConstantsTest {
         public static final String SCREENSHOT_DIR = System.getenv("USERPROFILE")
                         + "\\OneDrive\\Selenium Automation Test Outputs\\";
         public static String SUITE_NAME = "";
+        //We will organize the screenshots by test as well
+        public static String TEST_NAME ="";
 
         // JsonFilePaths Constants
         public static final String INVESTMENT_SERVICES_HEADERS_JSON = "src/test/resources/investmentServicesHeaders.json";
+        public static final String SELF_GUIDED_INVESTMENT_HEADERS_JSON = "src/test/resources/selfGuidedInvestmentHeaders.json";
 }
