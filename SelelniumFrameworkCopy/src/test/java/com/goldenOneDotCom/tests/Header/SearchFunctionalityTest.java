@@ -1,4 +1,4 @@
-package com.goldenOneDotCom.tests.SmokeTests.Header;
+package com.goldenOneDotCom.tests.Header;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
